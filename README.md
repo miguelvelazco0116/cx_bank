@@ -238,17 +238,322 @@ Identifying significant differences in app performance provides actionable insig
 ### Why It Matters for Business Growth
 
 Enhancing user experience isn't just about satisfaction — it has a direct impact on business outcomes:
-- Higher Customer Retention: A better app experience reduces churn, keeping customers engaged and loyal.
-- Increased Customer Loyalty: Positive user experiences drive long-term brand loyalty and encourage repeat usage.
-- Higher Conversions & Engagement: A well-performing app can lead to higher engagement, more transactions, and increased app usage.
+- **Higher Customer Retention:** A better app experience reduces churn, keeping customers engaged and loyal.
+- **Increased Customer Loyalty:** Positive user experiences drive long-term brand loyalty and encourage repeat usage.
+- **Higher Conversions & Engagement:** A well-performing app can lead to higher engagement, more transactions, and increased app usage.
 
 By focusing on the findings from the Kruskal-Wallis and Dunn’s Test, banks can adopt a more strategic approach to product development, driving better customer experiences and ultimately improving market share and brand loyalty.
 
+## Next Steps: Extracting Deeper Customer Insights Using LDA for Topic Modeling
+
+To better understand **customer experience (CX)** and how users interact with banking apps, we now turn to **Latent Dirichlet Allocation (LDA)** — a powerful technique for topic modeling. This next phase of analysis will allow us to uncover the hidden themes in user reviews and extract actionable insights to improve app performance and customer satisfaction.
+
+However, for LDA to deliver meaningful results, it’s essential to prepare the text data properly. Raw review text is often messy, unstructured, and filled with irrelevant information that can distort the analysis. This is why data preprocessing is a crucial step before running LDA.
+
+#### What is LDA, and Why Does Preprocessing Matter?
+
+LDA (Latent Dirichlet Allocation) is a machine learning algorithm used to identify hidden topics within large text datasets. It works by clustering words that frequently appear together into distinct topics, which provides a clearer understanding of the core themes present in customer reviews. For example, if customers frequently mention "login issues," "password problems," and "security," LDA might classify these words into a single “Account Access Issues” topic.
+
+But here’s the catch: LDA is only as effective as the quality of the data you feed it. Without preprocessing, noisy, irrelevant, or unstructured data can result in vague or meaningless topics. Imagine if random numbers, emojis, or repeated stopwords like "the" or "and" are included — they can confuse the model and produce cluttered, unhelpful results.
+
+#### How Does Preprocessing Help LDA?
+
+Preprocessing ensures that only relevant, high-quality text data is used in LDA, leading to more coherent and meaningful topics. Here’s why preprocessing is essential:
+- Removes Noise: Filters out irrelevant data such as punctuation, special characters, and emojis.
+- Reduces Redundancy: Eliminates stopwords (like “the”, “is”, “in”) that don’t add meaning to the analysis.
+- Standardizes Text: Converts text to lowercase and applies stemming/lemmatization to group similar words (e.g., “running” and “ran” become “run”).
+- Improves Interpretability: Clean data ensures that the topics extracted by LDA are more interpretable and useful for decision-making.
+
+**What’s Next?**
+
+In the next section, I’ll guide you through a step-by-step preprocessing pipeline that will transform raw text into clean, LDA-ready data. You’ll see how each stage — from tokenization to stopword removal and lemmatization — plays a role in improving the quality of the analysis. By the end, you'll have a clean dataset ready to extract powerful customer experience insights from user reviews.
+
+This process will pave the way for identifying key issues, customer pain points, and opportunities for app enhancement — all through the lens of LDA.
 
 
+**Preparing Text for LDA: The Essential Preprocessing Workflow**
 
+Before running the LDA (Latent Dirichlet Allocation) algorithm, it's crucial to prepare the text properly. Raw text is often messy, noisy, and unstructured, which can mislead the algorithm and produce irrelevant or incoherent topics. To ensure meaningful and actionable insights, we follow a systematic preprocessing workflow that includes cleaning, lemmatizing, creating n-grams, and filtering out unnecessary words.
 
+This process allows LDA to focus on the most important words, uncovering clear and interpretable topics. Here’s how each step contributes to better results.
 
+1️⃣ *Clean the Text*
+
+What It Is: 
+- Cleaning the text involves removing unnecessary elements such as:
+    - Punctuation (e.g., !, ?, ,, .)
+    - Numbers (e.g., 123, 2024)
+    - Special symbols (e.g., @, #, 🦊, 🐶)
+    - Stopwords (e.g., "and," "is," "the")
+
+Additionally, all text is converted to lowercase so that "Machine Learning" and "machine learning" are treated as the same entity, not separate words.
+
+Why It Matters:
+- Cleaning eliminates noise that could distract the algorithm from identifying key patterns. By focusing on the core words, we improve the relevance of the final topics.
+
+Example:
+- Raw text: "The quick brown fox jumps over 2 lazy dogs!! 🦊🐶"
+- Cleaned text: "quick brown fox jumps lazy dogs"
+
+2️⃣ *Lemmatize the Text*
+
+What It Is: 
+- Lemmatization reduces words to their root form or "dictionary form." Unlike stemming (which just removes suffixes), lemmatization returns valid words. For instance:
+    - "running," "ran," "runs" → "run"
+    - "children" → "child"
+
+Why It Matters:
+- Without lemmatization, LDA would treat variations of a word (e.g., "run" vs. "running") as separate words, reducing the clarity of topics. By grouping them into a single root form, the algorithm can better identify word patterns and improve topic coherence.
+
+Example:
+- Original text: "Dogs are running in the park."
+- Lemmatized text: "dog be run in the park"
+  
+3️⃣ *Find N-Grams*
+
+What It Is: 
+- N-grams are combinations of N consecutive words that frequently appear together.
+    - Unigrams (1 word): "machine", "learning", "model"
+    - Bigrams (2-grams): "machine learning", "data analysis"
+    - Trigrams (3-grams): "machine learning model", "natural language processing"
+
+Why It Matters:
+- Some concepts are better represented as phrases rather than individual words. For example, "New York" carries more meaning as a unit than as "New" and "York" separately. Without n-grams, LDA may fail to recognize the relationship between adjacent words, making topics less coherent.
+  
+Example:
+- Text: "I love machine learning models."
+- Bigrams: ["machine learning", "learning models"]
+- N-grams help LDA recognize important multi-word phrases, improving the clarity and relevance of the extracted topics.
+
+4️⃣ *Filter Out Words*
+
+What It Is: 
+- Filtering involves removing words that are either:
+    - Too common (like "great" or "good") — These words dominate topics, making them too broad.
+    - Too rare (like "obscuretermxyz") — Rare words provide little insight and add noise to the analysis.
+
+Why It Matters:
+- If extremely common words (like "good" or "people") are not filtered out, they will dominate the LDA topics, making them overly generic. Conversely, rare words that appear only once or twice add noise without contributing meaningful insights. By filtering these words, the model becomes more focused on relevant, impactful terms.
+
+Example:
+- Original list of words: ["machine", "learning", "data", "great", "obscuretermxyz"]
+- Filtered list: ["machine", "learning", "data"]
+- This step is essential for identifying specific, valuable topics instead of generic categories.
+
+<img src="img/preprocess-text.png" alt="preprocess text" align="center" width="800" height="600">
+
+#### What is LDA (Latent Dirichlet Allocation)?
+
+Latent Dirichlet Allocation (LDA) is one of the most widely used algorithms for topic modeling, a method that uncovers hidden themes or topics in large collections of text. Essentially, LDA helps group words into clusters, where each cluster represents a distinct topic. If you've ever wondered how to automatically identify the main ideas within a set of reviews, news articles, or social media comments — LDA is your go-to tool.
+
+How Does LDA Work?
+
+To understand LDA, it's helpful to break down its two key assumptions:
+- Documents Contain a Mix of Topics
+    - Each document (like a review, comment, or news article) is composed of multiple topics in varying proportions. For example:
+        - A news article might be 60% politics and 40% technology.
+        - A customer review might be 70% product quality and 30% shipping experience.
+- Topics Are Made Up of Related Words
+    - Each topic is defined by a group of words that frequently appear together. For example:
+        - A “sports” topic might include words like “game,” “team,” and “score.”
+        - A “customer experience” topic could have words like “support,” “help,” and “wait time.”
+
+**How Does LDA Identify Topics?**
+
+LDA works through an iterative probabilistic process:
+- It assigns a probability for each word in a document to belong to a particular topic.
+- It determines the proportion of topics within each document.
+- It refines these probabilities over several iterations until it reaches a stable result.
+
+*Here’s a simplified example:*
+- Input: Reviews from a mobile banking app.
+- Output: LDA identifies key topics like:
+- Topic 1: User Experience (words like "easy," "fast," "simple")
+- Topic 2: Security Issues (words like "login," "password," "fraud")
+- Topic 3: Customer Support (words like "help," "response," "agent")
+
+Each review is then assigned a percentage mix of these topics, so you can understand which issues customers care about most.
+
+**Why is LDA Useful?**
+
+LDA is powerful because it allows you to extract key themes from large, unstructured text datasets without manual labeling. It’s especially useful for:
+- Customer Feedback Analysis: Uncover customer pain points in reviews and identify the most common areas of concern.
+- Content Categorization: Automatically group news articles, research papers, or social media posts into categories.
+- Market Research: Understand consumer sentiment and emerging trends in product reviews.
+
+With LDA, you move beyond surface-level analysis and gain a deeper understanding of the hidden patterns in your data, making it an essential tool for customer experience insights, business strategy, and content analysis.
+
+<img src="img/LDA.jpg" alt="LDA" align="center" width="900" height="600">
+
+**What is LDA Coherence and Why Does It Matter?**
+
+When you use **LDA (Latent Dirichlet Allocation)** for topic modeling, one key challenge is figuring out how many topics to choose. This is where the Coherence Score comes in. It’s a metric that tells you how "meaningful" or "understandable" the topics are.
+
+Here’s a simple way to think about it:
+- Imagine you’re clustering customer reviews, and LDA identifies a topic that includes the words:
+    - ["bank," "deposit," "withdrawal," "account"]
+
+This makes sense as a topic because all these words are related to banking services. The coherence score measures how well the words in a topic stick together logically. The higher the score, the more coherent (and useful) the topic is. If, on the other hand, the words in a topic were ["bank," "pizza," "rocket"], the coherence score would be much lower because these words don’t naturally fit together.
+
+When running LDA, you can test different numbers of topics (like 5, 10, 20, etc.) and use the coherence score to select the best number. The goal is to find the "sweet spot" where the topics are meaningful and not too general or too specific.As shown in the following table, we can track the performance of each banking application.
+
+<img src="img/lda-results.png" alt="LDA results" align="center" width="600" height="400">
+
+#### Customer Insights from LDA Analysis of Banking Apps**
+
+Our analysis of customer feedback from key Mexican banking apps, using LDA (Latent Dirichlet Allocation), reveals critical insights into user experience (UX), key pain points, and growth opportunities for each bank. Here’s a concise summary of the most actionable findings for Santander, BBVA, Banco Azteca, Citibanamex, HSBC, and Banorte.
+
+**Santander - Key Insights**
+- Top Issues:
+    - Branch Dependency: Users are frustrated by the need to visit branches for token-based transactions and certain services.
+    - Technical Failures: Recurring technical issues after updates, particularly affecting transfers.
+    - Device Change Complications: The process for switching devices is cumbersome, especially for token reactivation.
+- Positive Aspects:
+    - Users appreciate improvements in speed, interface, and functionality.
+- Opportunities for Improvement:
+    - Digitize essential services to reduce branch reliance.
+    - Stabilize critical functions (e.g., transfers) to prevent failures after updates.
+    - Simplify device migration by creating an intuitive process with interactive guides.
+
+**BBVA - Key Insights**
+- Top Issues:
+    - Login and Authentication Issues: Login failures, especially biometric login (fingerprint, facial recognition).
+    - Branch Dependency: Reliance on physical branches for card and payment-related services.
+    - Transfer Failures Post-Update: Recent updates caused issues with money transfers, a critical feature for users.
+- Positive Aspects:
+    - Some users appreciate app improvements in speed and user interface design.
+- Opportunities for Improvement:
+    - Enhance login stability by optimizing biometric access and offering alternative login options.
+    - Prioritize transfer stability and rigorously test updates before release.
+    - Minimize branch reliance by digitizing card and payment-related operations.
+
+**Banco Azteca - Key Insights**
+- Top Issues:
+    - Branch Dependency: Users still rely on physical branches for basic operations like payments and credit management.
+    - Technical Issues Post-Update: Updates introduce new problems, especially related to app access and login.
+    - Frustration with Credit Services: Users face issues with credit and collection processes, often leading to negative sentiment.
+- Positive Aspects:
+    - Customers appreciate the app's speed, ease of use, and simplicity, which is seen as a competitive advantage.
+- Opportunities for Improvement:
+    - Digitize essential services (e.g., payments and credit management) to reduce branch reliance.
+    - Improve technical stability by ensuring updates are thoroughly tested before release.
+    - Improve communication to clarify credit processes and prevent confusion regarding collections and payments.
+
+**Citibanamex - Key Insights**
+- Top Issues:
+    - Transaction Visibility Issues: Users struggle to view transactions and balances, leading to confusion and frustration.
+    - Transfer Issues and Slowness: Transfers are slow and fail at times, especially after updates.
+    - Branch Dependency: Users still rely on physical branches for tasks like card management and payments.
+- Positive Aspects:
+    - Users appreciate the app's security, speed, and simple navigation.
+- Opportunities for Improvement:
+    - Improve transaction visibility by offering real-time updates and clear presentation of transactions and balances.
+    - Ensure transfer stability and conduct thorough testing before updates are released.
+    - Digitize key processes (like card management) to reduce the need for physical branch visits.
+
+**HSBC - Key Insights**
+- Top Issues:
+    - Account and Transfer Issues: Recurring failures in transfers and problems managing accounts.
+    - Authentication Issues: Token-based login issues cause frustration for users trying to access the app.
+    - Limited App Availability: Users report that certain app features are unavailable during specific hours (like nighttime), causing inconvenience.
+- Positive Aspects:
+    - Users appreciate the app's security, speed, and reliability when it functions as intended.
+- Opportunities for Improvement:
+    - Ensure 24/7 app availability and remove time-based service restrictions.
+    - Enhance token-based login stability to avoid lockouts and technical failures.
+    - Optimize customer service with in-app support to address user concerns more efficiently.
+
+**Banorte - Key Insights**
+- Top Issues:
+    - Authentication and Access Issues: Users experience problems with login, errors, and issues with mobile authentication.
+    - Slow Performance: Users report delays when performing critical functions like transfers and payments.
+    - Branch Dependency: Users must visit branches or use ATMs for certain tasks, reducing their autonomy.
+- Positive Aspects:
+    - Banorte is praised for its ease of use, speed, and intuitive design, which is a competitive advantage.
+- Opportunities for Improvement:
+    - Fix login and authentication issues to provide a smooth, error-free access experience.
+    - Improve transaction speed by optimizing backend systems to reduce wait times for transfers and payments.
+    - Increase digital service options to minimize branch dependency and enhance user autonomy.
+
+**General Takeaways for Banking Apps**
+
+Across all banks, some common themes emerged that present opportunities for industry-wide improvement:
+- Technical Stability: Many apps experience functionality issues post-update, especially affecting transfers and login authentication.
+- Branch Dependency: Users still rely on physical branches for essential services. There’s a clear demand for greater digital autonomy.
+- Login and Authentication: Failures in login (especially with biometrics) are a key source of frustration. Banks must optimize biometric systems and offer alternatives for seamless access.
+- Customer Sentiment: While users highlight some positive aspects (like speed, security, and ease of use), negative feedback often centers on technical issues, slow functionality, and confusing processes.
+
+**Actionable Recommendations for Banks**
+
+To improve customer experience and app performance, banks should prioritize the following actions:
+1. Stabilize Login and Authentication: Ensure users can log in consistently, with stable biometric access and support for multiple devices.
+2. Enhance Update Reliability: Roll out updates only after rigorous testing to avoid disruptions to key features like transfers and payments.
+3. Reduce Branch Dependency: Digitize processes like card management, transfers, and payments to eliminate the need for branch visits.
+4. Improve Transaction Visibility: Allow users to view transactions, balances, and account information in real time, with options for sharing or exporting statements.
+5. Optimize Performance and Speed: Speed up slow processes, reduce loading times, and ensure smooth navigation, especially for core features like transfers and payments.
+6. Customer-Centric Design: Simplify user flows, especially for key processes like device migration, payments, and logins, to reduce frustration.
+
+**Findings**
+
+This LDA-based analysis sheds light on the critical areas for improvement and key strengths of the most popular banking apps in Mexico. While some apps, like **Banorte** and **Banco Azteca**, are praised for their speed and simplicity, others, like **HSBC** and **Citibanamex,** face significant issues related to technical stability, login failures, and branch dependency.
+
+The analysis also highlights **cross-industry opportunities** for all banking apps, especially around **login reliability, transfer stability, and digital autonomy.** By addressing these pain points, banks can enhance customer experience, improve satisfaction, and increase app usage — all of which contribute to better customer retention and stronger brand loyalty.
+
+This data-driven approach not only identifies user pain points but also provides banks with clear, actionable recommendations to strengthen their competitive position in the growing digital banking landscape.
+
+## Target Market for Mobile Banking Users
+
+The growth of digital banking solutions has skyrocketed in recent years, driven by increased smartphone usage and the shift toward cashless transactions. As more users turn to mobile banking, understanding their demographic profile, purchasing habits, and daily activities becomes essential for financial institutions seeking to improve user experience and drive engagement.
+
+This next provides a comprehensive overview of the socio-demographic profile, user activity, and purchasing habits of mobile banking users, highlighting key characteristics and actionable insights for banks to optimize their digital offerings.
+
+📊 **Socio-Demographic Profile of Mobile Banking Users**
+1. Age Distribution
+- The majority of mobile banking users fall within the 18 to 39 age group, making up nearly 60% of total users.
+- Older users are a minority, with only 6.1% of users aged 60+, suggesting that digital adoption is still limited among senior citizens.
+- This highlights the need for user-friendly, intuitive interfaces that cater to younger, tech-savvy users while still being accessible to older age groups.
+  
+2. Gender Distribution
+- The gender split among users is fairly balanced, with 48% women and 52% men actively using mobile banking services.
+- This gender parity indicates a broad appeal across all consumer segments, making it crucial for banks to develop inclusive user experiences that cater to both men and women equally.
+
+📈 **User Activities and Employment Status**
+1. Employment Status
+- 42.5% of users are employed, while 34.8% are students.
+- This means that nearly 7 out of 10 users are actively working or studying, making them highly active in daily financial transactions such as payments, transfers, and shopping.
+- The remaining 28% of users are unemployed or retired, representing an opportunity for banks to create targeted solutions for non-working users, such as pension-related services or simpler, frictionless banking tools.
+  
+2. User Intentions and Engagement
+- Employed users are more likely to use banking apps for salary deposits, bill payments, and transfers, while students are more inclined to use them for small payments and e-commerce.
+- This insight allows banks to tailor in-app features, such as personalized notifications, financial planning tools, and expense tracking, to meet the specific needs of these two dominant user groups.
+
+🛒 **Purchasing Habits of Mobile Banking Users**
+1. What Users Buy Using Mobile Banking
+- Mobile banking is no longer limited to transfers and bill payments. Users are increasingly using banking apps to make purchases. Key buying behaviors include:
+    - 73% of users purchase clothing and accessories through their mobile banking apps.
+    - 48% buy home products, such as furniture, decor, and essential items.
+    - 44% purchase food and beverages, reflecting the rise of cashless payments for daily necessities.
+    - Only 6.7% of users purchase financial products, such as insurance, investments, or savings tools, indicating an untapped opportunity for banks to promote these services directly through the app.
+      
+2. Implications for Banks
+- The high purchase rates for clothing, home products, and groceries highlight the growing integration of banking apps with e-commerce platforms.
+- Banks could consider partnerships with retailers, loyalty programs, and cashback offers to further encourage mobile payments and increase app usage.
+- By promoting financial products (like insurance, loans, and savings) directly in the app, banks could tap into the underserved 6.7% segment of users who currently purchase financial products through banking apps.
+
+💡 **Key Takeaways**
+1. Young, Tech-Savvy Users Dominate
+- The core audience for mobile banking apps is young adults aged 18-39, most of whom are either employed or students. This means banks should prioritize features like quick transfers, frictionless payments, and financial tools that cater to fast-paced, mobile-driven lifestyles.
+
+2. Digital Purchases Are a Key Growth Area
+- Users frequently buy clothing, home products, and food using mobile banking apps. This presents an opportunity for banks to create cashback rewards, retailer partnerships, and "Buy Now, Pay Later" (BNPL) options directly within the app.
+
+3. Opportunities for New Products and Services
+- Only 6.7% of users purchase financial products through mobile banking apps, leaving room for banks to upsell loans, insurance, and savings products. By promoting these services in a user-friendly and personalized way, banks can drive cross-sell opportunities.
+
+4. Focus on Usability and Digital Autonomy
+- With nearly 60% of users under 40 and 28% unemployed or retired, banks must ensure their apps are easy to use for all age groups. This includes features like simple navigation, quick access to funds, and smooth onboarding for users unfamiliar with digital banking tools.
+
+By understanding this target market, banks can tailor their mobile banking strategies to meet the needs of these diverse user groups. From promoting financial products to enhancing app functionality, banks have a unique opportunity to grow user engagement, increase app adoption, and strengthen customer loyalty.
 
 
 
