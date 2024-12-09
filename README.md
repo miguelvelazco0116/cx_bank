@@ -555,8 +555,102 @@ This next provides a comprehensive overview of the socio-demographic profile, us
 
 By understanding this target market, banks can tailor their mobile banking strategies to meet the needs of these diverse user groups. From promoting financial products to enhancing app functionality, banks have a unique opportunity to grow user engagement, increase app adoption, and strengthen customer loyalty.
 
+## Target Market for Mobile Banking Users
 
+The analysis of Mexican banking apps reveals critical insights that affect every stage of the acquisition funnel—from awareness to loyalty. By leveraging data-driven insights, banks can attract potential users through targeted marketing that highlights app strengths like speed, security, and ease of use. Addressing pain points like login issues, post-update failures, and branch dependency at the consideration and registration stages ensures a smooth user experience, boosting sign-ups and conversions.
 
+To drive retention and loyalty, banks must prioritize app stability, 24/7 availability, and seamless updates to prevent drop-offs. Additionally, enhancing in-app support and introducing loyalty programs or referral incentives can increase customer lifetime value (CLV). By acting on these insights, banks can create a customer-centric strategy that drives higher app adoption, reduces churn, and strengthens competitive advantage in the fast-growing world of mobile banking.
 
+<img src="img/funnel.png" alt="funnel acquisition" align="center" width="900" height="500">
 
+## Conclusion
 
+The thematic analysis of user reviews for major Mexican banking apps — Santander, BBVA, Banco Azteca, CitiBanamex, HSBC, and Banorte — reveals key patterns, common issues, and areas of opportunity for improvement. While each bank faces unique challenges, certain cross-cutting themes affect the entire industry, presenting clear opportunities for collective improvement. The analysis also highlights Banorte as the best-performing app in terms of user satisfaction, ease of use, and efficiency.
+
+Despite notable progress in digital banking, technical stability, authentication issues, and the continued reliance on physical branches remain persistent challenges for all banking apps. These insights provide a clear roadmap for improving user experience, driving app engagement, and boosting customer retention.
+
+To remain competitive, banks must address technical issues, eliminate branch dependency, and prioritize a user-centric approach. Apps that embrace full digitalization and ensure the stability of key features like transfers, authentication, and login will be best positioned to retain existing users and attract new ones.
+
+By fixing core pain points and enhancing strengths, these banks can establish a competitive advantage in a growing digital market, especially as users increasingly demand seamless, fast, and reliable banking experiences.
+
+---
+
+**Key Findings**
+
+1️⃣ Common Problems Across All Banking Apps
+1. Technical Issues & Stability
+    - Problem: Updates often cause more issues than they solve, introducing new bugs or disrupting critical functionalities like transfers.
+    - Impact: Users lose confidence in the app’s reliability, especially when essential functions fail.
+    - Recommendation: Improve testing and quality assurance for all updates, especially for core features like transfers, payments, and login. Roll out updates gradually with rollback options in case of critical issues.
+2. Authentication & Login Issues
+    - Problem: Biometric authentication (fingerprint, facial recognition) often fails, disrupting access. Device synchronization and login errors further complicate the process.
+    - Impact: Frustrated users may abandon the app or reduce usage frequency.
+    - Recommendation: Strengthen the biometric authentication system to improve consistency. Offer multiple login options (biometrics, PIN, or SMS) to provide backup access and reduce lockouts.
+3. Dependency on Physical Branches
+    - Problem: Despite the "digital" nature of banking apps, users are still required to visit branches for basic actions like card management, payments, and troubleshooting.
+    - Impact: Users view this as an unnecessary hassle, especially those accustomed to fully digital experiences.
+    - Recommendation: Digitize critical processes (like card replacements, credit applications, and payment authorizations) to reduce dependency on branches. Offering live in-app support (chatbots) for customer service can also reduce branch visits.
+4. Inconsistent User Experience
+    - Problem: Some users praise the app’s ease of use, speed, and security, while others report frustration due to functionality failures.
+    - Impact: This inconsistency erodes user trust and creates a sense of unreliability in the app’s performance.
+    - Recommendation: Apply user feedback loops to consistently monitor and address pain points. Identify frequently reported issues and resolve them in the next update. Use in-app notifications to communicate to users when issues are resolved.
+5. Negative Perception of Updates
+    - Problem: Updates often receive mixed feedback. While some users see improvements, others feel the app gets worse (slower, more buggy, or with missing features).
+    - Impact: Updates risk damaging user sentiment and can lead to app abandonment if negative changes are frequent.
+    - Recommendation: Communicate "What's New" changes clearly before updates, showing users how the update improves their experience. Offer a "beta test" option so users can voluntarily test new versions before public release.
+
+2️⃣ Best-Performing App: Banorte
+
+Based on the analysis of reviews, Banorte stands out as the highest-rated banking app. It excels in critical areas like ease of use, speed, and intuitive design. Compared to other competitors, Banorte users report fewer issues with branch dependency and login challenges.
+
+- Key Strengths:
+    - Ease of Use: Users find the app intuitive and simple, requiring fewer clicks and minimal instructions to navigate.
+    - Speed: Banorte consistently outperforms its competitors in app speed, ensuring fast transfers and smooth navigation.
+    - Security: Users feel secure using the app, with strong support for authentication measures that are perceived as reliable.
+
+- Areas for Improvement:
+    - Authentication: Login issues related to biometric access and device synchronization still exist, although they occur less frequently than with other apps.
+    - Slow Updates: Some users experience lags in speed, particularly after new updates. Ensuring update stability is crucial for maintaining its market leadership.
+
+Banorte's success demonstrates how prioritizing user-centric features, app stability, and seamless transfers can drive higher user satisfaction.
+
+3️⃣ Key Considerations for All Competitors
+
+1. Technical Optimization
+    - What to Do: Ensure every app update goes through rigorous testing and quality control. Prevent "feature regressions" where new updates break key features.
+    - Why It Matters: Users expect banking apps to be as reliable as physical bank branches. Any error with transfers, payments, or authentication directly affects user trust.
+
+2. Enhanced Digital Experience
+    - What to Do: Eliminate branch dependency by digitizing key processes, such as card issuance, payment authorizations, and credit management.
+    - Why It Matters: Users expect modern banking apps to be fully digital. Reducing branch visits creates a stronger value proposition for digital users.
+
+3. User-Centric Design
+    - What to Do: Streamline interfaces for simple, intuitive navigation. Make account balances, transaction history, and transfers easy to view and access.
+    - Why It Matters: Simplicity drives user satisfaction. Clean, intuitive interfaces reduce learning curves, speed up daily tasks, and improve retention.
+
+4. Transparent Communication
+    - What to Do: Communicate app updates clearly. Notify users about new features, resolved issues, and the benefits of updates.
+    - Why It Matters: When users understand why an update matters, they are more likely to appreciate it. This increases app engagement and reduces negative reviews.
+
+5. Leverage Positive Feedback
+    - What to Do: Identify the features users love (like speed, ease of use, and security) and highlight them in app store listings, marketing materials, and ads.
+    - Why It Matters: Users look for reassurance before downloading or switching banking apps. Highlighting positive reviews and awards (like "fastest app") builds brand trust.
+
+--- 
+
+**General Recommendations**
+
+To compete in Mexico's growing digital banking landscape, all apps must address these core challenges:
+1. Digitize Core Processes: Allow customers to handle all essential banking tasks—like managing cards and making payments—within the app.
+2. Stabilize Updates: Test new features rigorously and communicate changes before release.
+3. Improve Authentication Systems: Ensure biometric login works seamlessly, and offer alternative login options (PIN, SMS, or manual).
+4. Focus on User-Centric Design: Make navigation intuitive, fast, and easy to use.
+5. Reduce Customer Frustration: Use in-app customer support, chatbots, and proactive alerts to resolve issues before users escalate them.
+
+--- 
+
+**Final Takeaway**
+
+Banking apps in Mexico are on a path of continuous improvement, but major issues still exist—branch dependency, login failures, and technical instability being the most prominent. **Banorte** leads the pack in customer satisfaction, thanks to its emphasis on speed, ease of use, and security. However, even Banorte must improve stability after updates and further digitize services to reduce branch visits.
+
+The opportunity for all competitors lies in embracing full digitalization, improving login reliability, and delivering a seamless, fast, and frustration-free user experience. As mobile banking adoption grows, these improvements will increase customer satisfaction, reduce churn, and foster customer loyalty. By learning from this analysis, banks can transform user pain points into competitive advantages and position their apps as the go-to digital banking solution for millions of Mexican users.
