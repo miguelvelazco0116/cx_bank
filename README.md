@@ -173,7 +173,7 @@ By leveraging ANOVA (or its non-parametric alternative) to analyze app ratings, 
 
 In our previous analysis, we observed that user ratings do not follow a normal distribution, which is a key assumption for applying ANOVA. This means that using ANOVA in this context could lead to inaccurate conclusions.
 
-**The Alternative: Kruskal-Wallis Test**
+**The Alternative: Kruskal-Wallis Test**<br><br>
 When the assumption of normality is violated, the Kruskal-Wallis test becomes a more suitable option. This non-parametric statistical test is designed to compare the medians of two or more independent groups, rather than their means, to determine if there are significant differences between them. Unlike ANOVA, it does not require the data to follow a normal distribution or exhibit homogeneity of variances.
 
 **Why Use the Kruskal-Wallis Test?**
