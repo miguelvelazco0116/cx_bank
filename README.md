@@ -1,6 +1,5 @@
 # What NLP Reveals About Mexican Banking Apps
 
-
 <img src="img/cover-main.png" alt="Cover main" width="500" height="300">
 
 - [Context](#context)
@@ -12,8 +11,14 @@
 - [Key Findings: Uncovering Differences in Banking App Ratings](#key-findings-uncovering-differences-in-banking-app-ratings)
    + [Market research analysis - notebook](market-research.ipynb)
 - [Next Steps: Extracting Deeper Customer Insights Using LDA for Topic Modeling](#next-steps-extracting-deeper-customer-insights-using-lda-for-topic-modeling)
+   + [How Does Preprocessing Help LDA?](#how-does-preprocessing-help-lda)
    + [What is LDA (Latent Dirichlet Allocation)?](#what-is-lda-latent-dirichlet-allocation)
-
+- [Customer Insights from LDA Analysis of Banking Apps][#customer-insights-from-lda-analysis-of-banking-apps]
+- [Target Market for Mobile Banking Users](#target-market-for-mobile-banking-users)
+- [From Awareness to Loyalty](#from-awareness-to-loyalty)
+- [Conclusion](#conclusion)
+   + [General Recommendations](#general-recommendations)
+   + [Final Takeaway]
 
 ## Context
 
