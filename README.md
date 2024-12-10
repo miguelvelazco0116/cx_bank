@@ -9,10 +9,10 @@
 - [Segmenting the Competitive Landscape of Mexican Banking Apps](#segmenting-the-competitive-landscape-of-mexican-banking-apps)
 - [The Importance of Sample Size in Analyzing Bank App Reviews](#the-importance-of-sample-size-in-analyzing-bank-app-reviews)
 - [Why Does ANOVA Matter?](##why-does-anova-matter?)
-- [Key Findings: Uncovering Differences in Banking App Ratings](#key-findings:-uncovering-differences-in-banking-app-ratings)
+- [Key Findings: Uncovering Differences in Banking App Ratings](#key-findings-uncovering-differences-in-banking-app-ratings)
    + [Market research analysis - notebook](market-research.ipynb)
 - [Next Steps: Extracting Deeper Customer Insights Using LDA for Topic Modeling](#next-steps:-extracting-deeper-customer-insights-using-lda-for-topic-modeling)
-   + [What is LDA (Latent Dirichlet Allocation)?](what-is-lda-(latent-dirichlet-allocation)?)
+   + [What is LDA (Latent Dirichlet Allocation)?](what-is-lda-(latent-dirichlet-allocation))
 
 
 ## Context
