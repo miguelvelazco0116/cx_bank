@@ -18,8 +18,6 @@
 - [Target Market for Mobile Banking Users](#target-market-for-mobile-banking-users)
 - [From Awareness to Loyalty](#from-awareness-to-loyalty)
 - [Conclusion](#conclusion)
-   + [General Recommendations](#general-recommendations)
-   + [Final Takeaway](#final-takeaway])
 
 ## Context
 
