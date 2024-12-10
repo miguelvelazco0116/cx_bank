@@ -11,8 +11,8 @@
 - [Why Does ANOVA Matter?](##why-does-anova-matter?)
 - [Key Findings: Uncovering Differences in Banking App Ratings](#key-findings-uncovering-differences-in-banking-app-ratings)
    + [Market research analysis - notebook](market-research.ipynb)
-- [Next Steps: Extracting Deeper Customer Insights Using LDA for Topic Modeling](#next-steps:-extracting-deeper-customer-insights-using-lda-for-topic-modeling)
-   + [What is LDA (Latent Dirichlet Allocation)?](what-is-lda-(latent-dirichlet-allocation))
+- [Next Steps: Extracting Deeper Customer Insights Using LDA for Topic Modeling](#next-steps-extracting-deeper-customer-insights-using-lda-for-topic-modeling)
+   + [What is LDA (Latent Dirichlet Allocation)?](#what-is-lda-latent-dirichlet-allocation)
 
 
 ## Context
