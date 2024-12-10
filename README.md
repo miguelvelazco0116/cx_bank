@@ -5,16 +5,14 @@
 
 - [Context](#context)
 - [Market Share and Competitors in Mexican Banking Apps](#market-share-and-competitors-in-mexican-banking-apps)
-   + [Data exploring](data_explorer.ipynb)
-- [ML models](#ml-models)
-   + [building the model](loyalty_drivers.ipynb)
-- [Most important features](#most-important-features)
-   + [building SHAP values](loyalty_drivers.ipynb)
-- [Budget optimization](#budget-optimization)
-   + [building the optimization model](optimizing_loyalty.ipynb)
-- [What if scenario](#what-if-scenario)
-   + [DiCE model](optimizing_loyalty.ipynb)
-- [Findings](#findings)
+- [The Importance of Sample Size in Analyzing Bank App Reviews](#the-importance-of-sample-size-in-analyzing-bank-app-reviews)
+- [Segmenting the Competitive Landscape of Mexican Banking Apps](#segmenting-the-competitive-landscape-of-mexican-banking-apps)
+- [The Importance of Sample Size in Analyzing Bank App Reviews](#the-importance-of-sample-size-in-analyzing-bank-app-reviews)
+- [Why Does ANOVA Matter?](##why-does-anova-matter?)
+- [Key Findings: Uncovering Differences in Banking App Ratings](#key-findings:-uncovering-differences-in-banking-app-ratings)
+   + [Market research analysis - notebook](market-research.ipynb)
+- [Next Steps: Extracting Deeper Customer Insights Using LDA for Topic Modeling](#next-steps:-extracting-deeper-customer-insights-using-lda-for-topic-modeling)
+   + [What is LDA (Latent Dirichlet Allocation)?](what-is-lda-(latent-dirichlet-allocation)?)
 
 
 ## Context
@@ -63,7 +61,7 @@ This disparity underscores **Banco Azteca's** effective focus on delivering a se
 
 <img src="img/avg-score.png" alt="Average Score" align="center" width="600" height="400">
 
-### Segmenting the Competitive Landscape of Mexican Banking Apps
+## Segmenting the Competitive Landscape of Mexican Banking Apps
 
 By analyzing key factors such as mobile app user ratings, deposit growth trends, credit market insights, delinquency rates, branch networks, and overall market share, we've identified distinct clusters within the customer segments of Mexican banks.
 
@@ -555,7 +553,7 @@ This next provides a comprehensive overview of the socio-demographic profile, us
 
 By understanding this target market, banks can tailor their mobile banking strategies to meet the needs of these diverse user groups. From promoting financial products to enhancing app functionality, banks have a unique opportunity to grow user engagement, increase app adoption, and strengthen customer loyalty.
 
-## Target Market for Mobile Banking Users
+## From Awareness to Loyalty
 
 The analysis of Mexican banking apps reveals critical insights that affect every stage of the acquisition funnel—from awareness to loyalty. By leveraging data-driven insights, banks can attract potential users through targeted marketing that highlights app strengths like speed, security, and ease of use. Addressing pain points like login issues, post-update failures, and branch dependency at the consideration and registration stages ensures a smooth user experience, boosting sign-ups and conversions.
 
