@@ -12,8 +12,8 @@
    + [Market research analysis - notebook](market-research.ipynb)
 - [Next Steps: Extracting Deeper Customer Insights Using LDA for Topic Modeling](#next-steps-extracting-deeper-customer-insights-using-lda-for-topic-modeling)
    + [How Does Preprocessing Help LDA?](#how-does-preprocessing-help-lda)
-   + [What is LDA (Latent Dirichlet Allocation)?](#what-is-lda-latent-dirichlet-allocation)
-- [Customer Insights from LDA Analysis of Banking Apps][#customer-insights-from-lda-analysis-of-banking-apps]
+   + [What is LDA (Latent Dirichlet Allocation)?](#what-is-lda-latent-dirichlet-allocation)     
+- [Customer Insights from LDA Analysis of Banking Apps](#customer-insights-from-lda-analysis-of-banking-apps)
    + [Reviews analysis - notebook](reviews-analysis.ipynb)
 - [Target Market for Mobile Banking Users](#target-market-for-mobile-banking-users)
 - [From Awareness to Loyalty](#from-awareness-to-loyalty)
